@@ -148,8 +148,8 @@ img {
 
 /*------------------hero block--------*/
 .hero-page {
-  background-color: #2e2f42;
   color: var(--secodary-text-color);
+  width: 1440px;
 
   margin-bottom: var(--main-large-spase);
   margin-left: auto;
@@ -157,6 +157,13 @@ img {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
+  content: "";
+
+  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7)),
+    url(../images/background/people-office\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -198,8 +205,6 @@ img {
   display: flex;
   gap: var(--main-small-space);
 }
-.features-list {
-}
 
 .features-title {
   margin-bottom: 8px;
@@ -209,7 +214,30 @@ img {
   min-width: 264px;
   text-align: left;
 }
+.features-list::before {
+  content: "";
+  display: block;
+  height: 112px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--button-main-color);
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+.strategy::before {
+  background-image: url(../images/background/antenna.svg);
+}
 
+.punctuality::before {
+  background-image: url(../images/background/clock.svg);
+}
+
+.diligence::before {
+  background-image: url(../images/background/diagram.svg);
+}
+.technologies::before {
+  background-image: url(../images/background/astronaut.svg);
+}
 /*------------------competence------------*/
 
 .work-title {
