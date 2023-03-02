@@ -149,7 +149,7 @@ img {
 /*------------------hero block--------*/
 .hero-page {
   color: var(--secodary-text-color);
-  width: 1440px;
+  max-width: 1440px;
 
   margin-bottom: var(--main-large-spase);
   margin-left: auto;
@@ -159,10 +159,15 @@ img {
   text-align: center;
   content: "";
 
-  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7)),
+  background-color: var(--primery-text-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/background/people-office\ 1.jpg);
+
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -308,6 +313,40 @@ img {
   background-color: var(--primary-bg-color);
 }
 
+/*-------customers---------*/
+.customer-block {
+  max-width: 1440px;
+  background-color: var(--button-main-color);
+  margin-bottom: 120px;
+}
+.customer-title {
+  color: var(--title-text-color);
+  font-family: inherit;
+  font-weight: 700px;
+  font-size: 36px;
+  line-height: 1, 1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  padding-top: 130px;
+  margin-bottom: 72px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.customer-block {
+  padding: 130px 473px px;
+  background-color: #fff;
+  max-width: 1440px;
+}
+.customer-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.brand-link {
+  width: 168px;
+  height: 88px;
+}
+
 /*-------------------footer----------------*/
 .footer {
   color: var(--secodary-text-color);
@@ -319,10 +358,42 @@ img {
 }
 
 .footer-block {
-  width: 264px;
+  display: flex;
+}
+.footer-text {
+  margin-top: 16px;
 }
 .footer-logo {
+  width: 264px;
+}
+.footer-links {
+  margin-left: 120px;
+  margin-right: auto;
+}
+.footer-title {
   margin-bottom: 16px;
+}
+
+.socialmedia-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  gap: 16px;
+}
+.icon_item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primery-text-color);
+
+  background-repeat: no-repeat;
+}
+
+.link-item {
+  background-position: center;
+  width: 24px;
+  height: 24px;
 }
 
 /*-------------<page portfolio>------------*/
