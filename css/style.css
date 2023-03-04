@@ -67,6 +67,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  text-decoration: none;
+  font-style: normal;
+}
 
 /*---header----*/
 .page-hader {
@@ -87,7 +91,6 @@ img {
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
-  text-decoration: none;
   text-transform: uppercase;
 }
 .logo-part {
@@ -110,7 +113,7 @@ img {
 .navbar-link {
   font-size: 16px;
   font-weight: 500;
-  text-decoration: none;
+
   color: var(--title-text-color);
 }
 
@@ -133,7 +136,6 @@ img {
   text-decoration: none;
   color: var(--primery-text-color);
   font-size: 16px;
-  font-style: normal;
 }
 
 .contacts-mail:hover,
@@ -176,7 +178,6 @@ img {
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: 0.02em;
-
   margin-bottom: 48px;
 }
 
@@ -193,7 +194,6 @@ img {
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.5;
-
   cursor: pointer;
 }
 
@@ -297,20 +297,46 @@ img {
 }
 .team-block {
   background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-content {
   padding: 32px 16px;
   text-align: center;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-member {
   color: var(--title-text-color);
   margin-bottom: 8px;
 }
 .team-image {
   background-color: var(--primary-bg-color);
+}
+.team-person {
+  margin-bottom: 8px;
+}
+.personal-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.personal-item {
+  width: 40px;
+  height: 40px;
+}
+.personal-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.personal-link:hover {
+  background-color: var(--accent-color-hover);
 }
 
 /*-------customers---------*/
@@ -342,9 +368,21 @@ img {
   justify-content: center;
   gap: 24px;
 }
+
 .brand-link {
+  display: block;
   width: 168px;
   height: 88px;
+  padding: 16px 32px;
+  fill: #8e8f99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.brand-link:hover,
+.brand-link:focus {
+  fill: var(--accent-color-hover);
+  border-color: var(--accent-color-hover);
 }
 
 /*-------------------footer----------------*/
@@ -364,36 +402,45 @@ img {
   margin-top: 16px;
 }
 .footer-logo {
+  display: block;
   width: 264px;
 }
-.footer-links {
+.footer-logo > .logo {
+  margin-bottom: 16px;
+}
+
+/*----social links---*/
+.socialmedia-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.social-links {
   margin-left: 120px;
   margin-right: auto;
-}
-.footer-title {
-  margin-bottom: 16px;
 }
 
 .socialmedia-list {
   display: flex;
-  padding: 0;
-  margin: 0;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
 }
-.icon_item {
+.socialmedia-item {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: var(--primery-text-color);
-
-  background-repeat: no-repeat;
 }
 
-.link-item {
-  background-position: center;
-  width: 24px;
-  height: 24px;
+.socialmedia-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--primery-text-color);
+}
+.socialmedia-link:hover {
+  background-color: #31d0aa;
 }
 
 /*-------------<page portfolio>------------*/
@@ -419,7 +466,6 @@ img {
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.04em;
-  box-shadow: none;
 }
 .button-item:hover,
 .button-item:focus {
@@ -427,6 +473,11 @@ img {
   background-color: var(--accent-color-hover);
   color: var(--secodary-text-color);
   border-color: var(--accent-color-hover);
+}
+.button-filter:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /*-------------portfolio----------------*/
@@ -450,14 +501,23 @@ img {
 .portfilio-block .list:nth-child(3n) {
   margin-right: 0px;
 }
+.portfolio-list:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .portfolio-content {
+  color: var(--primery-text-color);
+  text-decoration: none;
   padding-top: 32px;
   padding-left: 16px;
   padding-bottom: 32px;
   text-align: left;
   border: 1px solid var(--button-border-color);
   border-top: none;
+}
+.portfolio-content:hover {
+  border-color: var(--button-main-color);
 }
 .portfolio-title {
   margin-bottom: 8px;
