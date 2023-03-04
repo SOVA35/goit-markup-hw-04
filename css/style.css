@@ -439,7 +439,7 @@ a {
   border-radius: 50%;
   background-color: var(--primery-text-color);
 }
-.socialmedia-link:hover {
+.socialmedia-link:is(:hover, :focus) {
   background-color: #31d0aa;
 }
 
